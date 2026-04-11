@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
      - run: echo "Pull request merged succefully"
-  check_if_closed_only:
-    if: github.event.pull_request.merged == false
-    runs-on: ubuntu-latest
-    steps:
-     - run: echo "Pull request was closed only"
+#  check_if_closed_only:
+#    if: github.event.pull_request.merged == false
+#    runs-on: ubuntu-latest
+#    steps:
+#    - run: echo "Pull request was closed only"
