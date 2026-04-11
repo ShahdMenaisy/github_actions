@@ -36,3 +36,5 @@ jobs:
         run: ls
       - name: check python is installed
         run : python --version
+      - name: show runner time
+        run : date
