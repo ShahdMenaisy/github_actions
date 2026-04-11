@@ -38,3 +38,5 @@ jobs:
         run : python --version
       - name: show runner time
         run : date
+      - name: show time only
+        run: date +%T
