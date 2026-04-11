@@ -59,7 +59,7 @@ jobs:
           docker build \
             --build-arg PYTHON_VERSION=${{ matrix.python-version }} \
             -t "${IMAGE_NAME}:latest" \
-            Dockerfile.arg-base   
+            -f  Dockerfile.arg-base   
       - name: Save Docker image as artifact file
         # Save the built image so the deploy job uses the same package.
         run: docker save "${IMAGE_NAME}:${{ steps.image-tag.outputs.image_tag }}" -o "${IMAGE_TAR}"
