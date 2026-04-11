@@ -1,0 +1,20 @@
+name: 01 Hello Exercise
+
+on:
+  pull_request: 
+    types: closed
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check_if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:  
+     - run: echo "Pull request merged succefully"
+  check_if_closed_only:
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "Pull request was closed only"
