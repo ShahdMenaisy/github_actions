@@ -9,7 +9,7 @@ on:
     paths:
       - "app/**"
       - "tests/**"
-      - ".github/workflows/02-ci.yml"
+      - ".github/workflows/02-ci-matrix.yml"
   # Allow a safe manual run before students trigger it with a code change.
   
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.12, 3.11]
+        python-version: ["3.12", "3.11"]
     steps:
       - name: Check out repository
         # Download the repository contents onto the runner.
