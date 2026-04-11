@@ -56,7 +56,7 @@ jobs:
 
       - name: Upload build artifact
         # Store the packaged output so a later workflow can use the exact same package.
-        uses: actions/upload-artifact@v4
+        uses: into-docker/build-action@798fa1c409991bfd36ceeccd3e074730b20d6435
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.IMAGE_TAR }}
