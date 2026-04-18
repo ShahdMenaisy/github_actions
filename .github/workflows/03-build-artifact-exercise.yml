@@ -50,7 +50,7 @@ jobs:
         #  docker build \
         #    -t "${IMAGE_NAME}:${{ steps.image-tag.outputs.image_tag }}" \
          #   .
-        uses: into-docker/build-action@v4v    
+        uses: docker/build-push-action@v7.1.0    
 
       - name: Save Docker image as artifact file
         # Convert that exact tagged image into a file that can be reused later.
